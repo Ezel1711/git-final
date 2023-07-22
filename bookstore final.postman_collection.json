@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "656d4f37-f517-4c70-9c5f-929eab4b17c9",
+		"name": "bookstore final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27682737",
+		"_collection_link": "https://interstellar-eclipse-602392.postman.co/workspace/e3b06433-4c10-44e5-b16e-c529d560ced2/collection/27682737-656d4f37-f517-4c70-9c5f-929eab4b17c9?action=share&creator=27682737&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "book store",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/BookStore/v1/Books",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Ezel171191!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ezel",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/User/ea3669d1-2efc-459a-8c66-626ca955b435",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"User",
+								"ea3669d1-2efc-459a-8c66-626ca955b435"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get isbn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://demoqa.com/BookStore/v1/Book?ISBN=9781593275846",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Book"
+							],
+							"query": [
+								{
+									"key": "ISBN",
+									"value": "9781593275846"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "account authorisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"Ezel\",\r\n  \"password\": \"Ezel171191!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/Authorized",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"Authorized"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post user 400",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"Ezel\",\r\n  \"password\": \"9506Ezel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/User",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post user 201",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"Ezel\",\r\n  \"password\": \"Ezel171191!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/User",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"User"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"Ezel\",\r\n  \"password\": \"Ezel171191!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/GenerateToken",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"GenerateToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post books",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Ezel171191!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ezel",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"ea3669d1-2efc-459a-8c66-626ca955b435\",\r\n  \"collectionOfIsbns\": [\r\n    {\r\n      \"isbn\": \"9781491950296\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/BookStore/v1/Books",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Books"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Ezel171191!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ezel",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/User/7a3bdef2-c3dd-4bfe-95f7-4b5700856577",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"User",
+								"7a3bdef2-c3dd-4bfe-95f7-4b5700856577"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edelete isbn",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Ezel171191!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ezel",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"isbn\": \"9781449325862\",\r\n  \"userId\": \"ea3669d1-2efc-459a-8c66-626ca955b435\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/BookStore/v1/Book?ISBN=9781449325862",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Book"
+							],
+							"query": [
+								{
+									"key": "ISBN",
+									"value": "9781449325862"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "Ezel171191!",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Ezel",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"ea3669d1-2efc-459a-8c66-626ca955b435\",\r\n  \"isbn\": \"9781593275846\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/BookStore/v1/Books/9781491950296",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Books",
+								"9781491950296"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

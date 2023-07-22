@@ -1,0 +1,1 @@
+SELECT SUM(goals) FROM sys.GAMES

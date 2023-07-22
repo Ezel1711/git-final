@@ -1,0 +1,1 @@
+UPDATE  sys.games set team ="Zenit" where game_id = "15games"
